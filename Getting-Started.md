@@ -29,7 +29,7 @@ Then, you'll need to load the ```MaterialDesignTheme.Defaults.xaml``` file, whic
 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" /> 
 ```
 
-If you have chosen the Light theme, your App.xaml should be looking something like this for now:
+Your App.xaml should be looking something like this for now:
 ```xml
 <Application x:Class="MaterialTest.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -39,7 +39,7 @@ If you have chosen the Light theme, your App.xaml should be looking something li
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />                
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -72,19 +72,19 @@ Where *COLOR_NAME* represents the name of the color swatch you want to import. F
 
 Where XXX represents the intensity of the color, as displayed on [Google's guide](http://www.google.com.br/design/spec/style/color.html#color-color-palette). (*Note:* The Toolkit's swatches only contain intesities 50 through 900 for Primary colors and 100, 200, 400, and 700 for Accent/Secondary colors.). Notice how unnamed swatches will be ovewritten if multiple colors are imported, while named swatches won't.
 
-When defining the necessary color brushes with swatches, it is customary to use intensity 200 for Primary Light, 500 for Primary Mid, 700 for Primary Dark, and 700 for Accent/Secondary. For example, if you wanted to use Deep Purple as your primary color and Lime as your accent color, you'd do the following:
+When defining the necessary color brushes with swatches, it is customary to use intensity 200 for Primary Light, 500 for Primary Mid, 700 for Primary Dark, and 700 for Accent/Secondary. For example, if you wanted to use Blue as your primary color and Lime as your accent color, you'd do the following:
 
 ```xml
-<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.DeepPurple.Named.xaml" />
+<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Blue.Named.xaml" />
  <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Lime.Named.xaml" />
                 
  <ResourceDictionary>
-     <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="{StaticResource DeepPurplePrimary200}"/>
-      <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="{StaticResource DeepPurplePrimary200Foreground}"/>
-      <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource DeepPurplePrimary500}"/>
-      <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="{StaticResource DeepPurplePrimary500Foreground}"/>
-      <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource DeepPurplePrimary700}"/>
-      <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="{StaticResource DeepPurplePrimary700Foreground}"/>
+     <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="{StaticResource BluePrimary200}"/>
+      <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="{StaticResource BluePrimary200Foreground}"/>
+      <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource BluePrimary500}"/>
+      <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="{StaticResource BluePrimary500Foreground}"/>
+      <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource BluePrimary700}"/>
+      <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="{StaticResource BluePrimary700Foreground}"/>
       
       <SolidColorBrush x:Key="SecondaryAccentBrush" Color="{StaticResource LimeAccent700}"/>
       <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="{StaticResource LimeAccent700Foreground}"/>                    
