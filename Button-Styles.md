@@ -6,51 +6,51 @@ Style="{DynamicResource STYLE_NAME}"
 ```
 Where *STYLE_NAME* is the name of the style you want to add.
 
-# MaterialDesignRaisedButton
+## MaterialDesignRaisedButton
 Uses the Primary Mid color scheme.
 
 ![](http://i.imgur.com/t3ZYodb.gif)
 
-## MaterialDesignRaisedLightButton
+#### MaterialDesignRaisedLightButton
 This variant changes the color scheme to Primary Light.
 
 ![](http://i.imgur.com/LBWcJuT.gif)
 
-## MaterialDesignRaisedDarkButton
+#### MaterialDesignRaisedDarkButton
 This variant changes the color scheme to Primary Dark.
 
 ![](http://i.imgur.com/tX2SfRI.gif)
 
-## MaterialDesignRaisedAccentButton
+#### MaterialDesignRaisedAccentButton
 This variant changes the color scheme to Accent.
 
 ![](http://i.imgur.com/xJYpcep.gif)
 
-# MaterialDesignFlatButton
+## MaterialDesignFlatButton
 ![](http://i.imgur.com/etcxTKK.gif)
 
-# MaterialDesignToolButton
+## MaterialDesignToolButton
 ![](http://i.imgur.com/EQUF9iO.gif)
 
-## MaterialDesignToolForegroundButton
+#### MaterialDesignToolForegroundButton
 This variant sets the button's foreground color to the same as its parent's foreground color, but is otherwise identical to MaterialDesignToolButton.
 
-# MaterialDesignFloatingActionButton
+## MaterialDesignFloatingActionButton
 Uses the Primary Mid color scheme
 
 ![](http://i.imgur.com/hB2xphY.gif)
 
-## MaterialDesignFloatingActionLightButton
+#### MaterialDesignFloatingActionLightButton
 This variant changes the color scheme to Primary Light.
 
 ![](http://i.imgur.com/KKs2Tn1.gif)
 
-## MaterialDesignFloatingActionDarkButton
+#### MaterialDesignFloatingActionDarkButton
 This variant changes the color scheme to Primary Dark.
 
 ![](http://i.imgur.com/MoTuQCx.gif)
 
-## MaterialDesignFloatingActionAccentButton
+#### MaterialDesignFloatingActionAccentButton
 This variant changes the color scheme to Accent.
 
 ![](http://i.imgur.com/j4x5FjX.gif)
