@@ -65,6 +65,26 @@ By default Metro uses Segoe UI for all its controls. If you want to make them lo
 <FontFamily x:Key="ToggleSwitchHeaderFontFamily">pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto</FontFamily>
 ```
 
+## The Dialogs
+Using MetroWindow's dialogs with the Toolkit is very easy: the only difference is some extra settings to override the styles of the controls inside the dialog.
+
+First, create a ResourceDictionary that points to the file designed to override dialogs' controls:
+
+```C#
+var dictionary = new ResourceDictionary();
+dictionary.Source = new System.Uri(@"pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.MahApps.Dialogs.xaml");
+```
+
+Then, just change the following properties in the `MetroDialogSettings` that will be sent to the dialog:
+```C#
+settings.SuppressDefaultResources = true;
+settings.CustomResourceDictionary = dictionary;
+```
+
+### Known Issues
+* **Progress Dialog:** The 'negative button' in this dialog cannot be styled, it will always use the default Metro style. This is most likely a bug in MahMapps itself.
+* **Login Dialog:** `UsernameWatermark` and `PasswordWatermark` have no effect when Material Design styles are used. Setting `EnablePasswordPreview` to true reverts the Password Textbox back to the default Metro style.
+
 ## App.xaml example
 Here's an example app.xaml, using Blue as the primary color and Lime as the accent color:
 
