@@ -121,7 +121,7 @@ Now your window's text will also blend in nicely with Material Design.
 To use Material Design in XAML Toolkit, you'll need to install the package manually or through NuGet, import either the Light or Dark theme, import the Default file that contains all of the component's themes, define Eight SolidColorBrushes with colors of your preference, and configure your window to use Material Design's looks.
 
 # Using the Toolkit with MahApps
-This section is not complete yet. Please check later for progress.
+If you also want to use MahApps.Metro in your project, check out the [[MahApps.Metro integration]] page.
 
 # Aftermath
 Now that you're all set to stun your users with modern and beautiful applications, you should take a look at the [Toolkit's Demo](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit/tree/master/MainDemo.Wpf) to learn how to properly use components and styles, or at the [Mash Up Demo](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit/tree/master/MahMaterialDragablzMashUp) to see how to integrate Material Design, MahApps, and Dragablz for a truly modern application.
