@@ -1,4 +1,3 @@
-# MahApps.Metro integration
 While the Metro UI itself does not integrate nicely with Google's guidelines, MahApps.Metro contains the MetroWindow, which has new looks and functionality that can be quite handy for Material Design. The Toolkit has a built-in support for MahApps, which resides in the *MaterialDesignThemes.MahApps* project.
 
 ## The Basics
