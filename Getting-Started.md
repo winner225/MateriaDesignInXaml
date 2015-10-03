@@ -51,9 +51,9 @@ If you open your project now, you'll notice the components work but lack color. 
 
 In Material Design, two 'palettes' need to be defined: Primary and Accent. To make your life easier, the Toolkit includes all of [Google's swatches](https://www.google.com/design/spec/style/color.html#color-color-palette) and their recommended palettes built in and ready to be used! They are contained in the MaterialDesignColors project, which is imported automatically as a dependency when you install the main NuGet package. 
 
-In this section, we'll use the recommended palettes to define our application's colors, since they're the easiest way to do it and also the most common. If you'd like to hear more about Swatches, how they work, and how to define your own, head over to the [[Swatches]] page.
+In this section, we'll use the recommended palettes to define our application's colors, since they're the easiest way to do it and also the most common. If you'd like to learn more, see the [[Swatches and Recommended Colors]] page.
 
-The recommended palettes live in ```/Themes/Recommended/Accent/MaterialDesignColor.COLOR_NAME.xaml``` and ```/Themes/Recommended/Primary/MaterialDesignColor.COLOR_NAME.xaml```, inside the *MaterialDesignColors* project, where *COLOR_NAME* is the name of the color swatch as defined in [Google's guide](https://www.google.com/design/spec/style/color.html#color-color-palette), without spaces (So *Deep Purple* becomes *DeepPurple*). Please note that not all swatches have Primary and Accent colors. So see which ones are available, consult Google's guide or the project's [Accent](/tree/master/MaterialDesignColors.Wpf/Themes/Recommended/Accent) and [Primary](/tree/master/MaterialDesignColors.Wpf/Themes/Recommended/Primary) folders.
+The recommended palettes live in ```/Themes/Recommended/Accent/MaterialDesignColor.COLOR_NAME.xaml``` and ```/Themes/Recommended/Primary/MaterialDesignColor.COLOR_NAME.xaml```, inside the *MaterialDesignColors* project, where *COLOR_NAME* is the name of the color swatch as defined in [Google's guide](https://www.google.com/design/spec/style/color.html#color-color-palette), without spaces (So *Deep Purple* becomes *DeepPurple*). Please note that not all swatches have Primary and Accent colors. So see which ones are available, consult Google's guide or the project's [Accent](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit/tree/master/MaterialDesignColors.Wpf/Themes/Recommended/Accent) and [Primary](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit/tree/master/MaterialDesignColors.Wpf/Themes/Recommended/Primary) folders.
 
 Now, let's get to the code. Importing them is very similar to how you imported other resources earlier, just with a change to the project:
 
@@ -109,7 +109,7 @@ These will ensure the window uses Material Design colors, blending in nicely wit
 Now your window's text will also blend in nicely with Material Design.
 
 ## Summary
-To use Material Design in XAML Toolkit, you'll need to install the package manually or through NuGet, import either the Light or Dark theme, import the Default file that contains all of the component's themes, define Eight SolidColorBrushes with colors of your preference, and configure your window to use Material Design's looks.
+To use Material Design in XAML Toolkit, you'll need to install the package manually or through NuGet, import either the Light or Dark theme, import the Default file that contains all of the component's themes, choose Primary and Accent colors of your preference, and configure your window to use Material Design's looks.
 
 # Using the Toolkit with MahApps
 If you also want to use MahApps.Metro in your project, check out the [[MahApps.Metro integration]] page.
