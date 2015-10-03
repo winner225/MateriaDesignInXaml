@@ -51,47 +51,40 @@ If you open your project now, you'll notice the components work but lack color. 
 
 ### The Colors
 
-Unlike other toolkits, Material Design in XAML leaves the color definitions up to its user. Eight SolidColorBrushes need to be defined: PrimaryHueLightBrush, PrimaryHueLightForegroundBrush, PrimaryHueMidBrush, PrimaryHueMidForegroundBrush, PrimaryHueDarkBrush, PrimaryHueDarkForegroundBrush, SecondaryAccentBrush, and SecondaryAccentForegroundBrush.
+In Material Design, two 'palettes' need to be defined: Primary and Accent. To make your life easier, the Toolkit includes all of [Google's swatches](https://www.google.com/design/spec/style/color.html#color-color-palette) and their recommended palettes built in and ready to be used! They are contained in the MaterialDesignColors project, which is imported automatically as a dependency when you install the main NuGet package. 
 
-To make your life easier, the Toolkit includes several *Swatches*, which are collections of pre-designed color shades that can be used for your brushes. They come in two varieties and can be imported with the following lines:
+In this section, we'll use the recommended palettes to define our application's colors, since they're the easiest way to do it and also the most common. If you'd like to hear more about Swatches, how they work, and how to define your own, head over to the [[Swatches]] page.
+
+The recommended palettes live in ```/Themes/Recommended/Accent/MaterialDesignColor.COLOR_NAME.xaml``` and ```/Themes/Recommended/Primary/MaterialDesignColor.COLOR_NAME.xaml```, inside the *MaterialDesignColors* project, where *COLOR_NAME* is the name of the color swatch as defined in [Google's guide](https://www.google.com/design/spec/style/color.html#color-color-palette), without spaces (So *Deep Purple* becomes *DeepPurple*). Please note that not all swatches have Primary and Accent colors. So see which ones are available, consult Google's guide or the project's [Accent](/tree/master/MaterialDesignColors.Wpf/Themes/Recommended/Accent) and [Primary](/tree/master/MaterialDesignColors.Wpf/Themes/Recommended/Primary) folders.
+
+Now, let's get to the code. Importing them is very similar to how you imported other resources earlier, just with a change to the project:
 
 ```xml
-<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.COLOR_NAME.xaml" />
+<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.COLOR_NAME.xaml" />
+<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.COLOR_NAME.xaml" />
 ```
 
-Or
+So, if you wanted to use Deep Purple as your primary color and Lime as your secondary, your app.xaml would look something like this right now:
 
 ```xml
- <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.COLOR_NAME.Named.xaml" />
- ```
- 
-Where *COLOR_NAME* represents the name of the color swatch you want to import. For a list of all color names, check the [repository's Theme folder on GitHub](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit/tree/master/Themes). Those swatches are based on [Google's Material Design style guide](http://www.google.com.br/design/spec/style/color.html#color-color-palette), and contain four 'sets' of StaticResource colors each: 
- 
- * For the common swatches: PrimaryXXX, PrimaryXXXForeground, AccentXXX, AccentXXXForeground
- * For the named swatches: COLOR_NAMEPrimaryXXX, COLOR_NAMEPrimaryXXXForeground, COLOR_NAMEAccentXXX, COLOR_NAMEAccentXXXForeground.
+<Application x:Class="MaterialTest.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
 
-Where XXX represents the intensity of the color, as displayed on [Google's guide](http://www.google.com.br/design/spec/style/color.html#color-color-palette). (*Note:* The Toolkit's swatches only contain intesities 50 through 900 for Primary colors and 100, 200, 400, and 700 for Accent/Secondary colors.). Notice how unnamed swatches will be ovewritten if multiple colors are imported, while named swatches won't.
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
 
-When defining the necessary color brushes with swatches, it is customary to use intensity 200 for Primary Light, 500 for Primary Mid, 700 for Primary Dark, and 700 for Accent/Secondary. For example, if you wanted to use Blue as your primary color and Lime as your accent color, you'd do the following:
-
-```xml
-<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Blue.Named.xaml" />
- <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Lime.Named.xaml" />
-                
- <ResourceDictionary>
-     <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="{StaticResource BluePrimary200}"/>
-      <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="{StaticResource BluePrimary200Foreground}"/>
-      <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource BluePrimary500}"/>
-      <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="{StaticResource BluePrimary500Foreground}"/>
-      <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource BluePrimary700}"/>
-      <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="{StaticResource BluePrimary700Foreground}"/>
-      
-      <SolidColorBrush x:Key="SecondaryAccentBrush" Color="{StaticResource LimeAccent700}"/>
-      <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="{StaticResource LimeAccent700Foreground}"/>                    
-  </ResourceDictionary>  
+            </ResourceDictionary.MergedDictionaries>            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
 ```
-
-Please note that the usage of Swatches for the brushes is optional. They can be defined with custom colors if you wish to do so.
 
 ## Configuring your Window(s)
 We're almost there! Now, all we need to do is configure our window to have Material Designs's look. There are no secrets here, you just need to add a few parameters to your Window's opening tag. The basic ones are:
