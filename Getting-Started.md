@@ -51,7 +51,7 @@ If you open your project now, you'll notice the components work but lack color. 
 
 **Please note** _the following colors instructions refer to MaterialDesignColors.dll version 1.1.1, which will automatically be installed with MaterialDesignThemes v1.1+, but this is currently in_ **pre-release**.  _If you are not using the latest CI (continuous) release of the Themes package, then either_
 
-1. _Look  at this "classic" v.1.0 App.xaml:_
+1. _Look at the "classic" v.1.0 App.xaml [here](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit/wiki/Classic-v1.0-App.xaml)_
 2. _Upgrade to Colors 1.1.1_
 3. _Hop on the the continuous CI build of the themes (which will give you colors 1.1.1)_
 
