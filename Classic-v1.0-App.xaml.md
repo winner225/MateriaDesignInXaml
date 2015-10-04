@@ -1,6 +1,6 @@
 Illustration of how to configure your App.xaml in version 1.0 of the toolkit.  A simpler mechanism is available for 1.1, but 1.1 is currently under development.
 
-```
+```xml
 <Application x:Class="MaterialDesignColors.WpfExample.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
