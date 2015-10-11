@@ -1,4 +1,4 @@
-Illustration of how to configure your App.xaml in version 1.0 of the toolkit.  A simpler mechanism is available for 1.1, but 1.1 is currently under development.
+Illustration of advanced configuration your App.xaml which allows individual hues to be specified.
 
 ```xml
 <Application x:Class="MaterialDesignColors.WpfExample.App"
@@ -13,7 +13,7 @@ Illustration of how to configure your App.xaml in version 1.0 of the toolkit.  A
                 <ResourceDictionary>
                     <!-- include your primary palette -->
                     <ResourceDictionary.MergedDictionaries>
-                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Indigo.xaml" />
+                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Indigo.Named.xaml" />
                     </ResourceDictionary.MergedDictionaries>
                     <!--
                             include three hues from the primary palette (and the associated forecolours).
@@ -31,7 +31,7 @@ Illustration of how to configure your App.xaml in version 1.0 of the toolkit.  A
                 <ResourceDictionary>
                     <!-- include your secondary pallette -->
                     <ResourceDictionary.MergedDictionaries>
-                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Yellow.xaml" />
+                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Yellow.Named.xaml" />
                     </ResourceDictionary.MergedDictionaries>
 
                     <!-- include a single secondary accent color (and the associated forecolour) -->
