@@ -1,4 +1,4 @@
-Illustration of advanced configuration your App.xaml which allows individual hues to be specified.
+Illustration of advanced configuration of App.xaml which allows individual palette hues to be specified.
 
 ```xml
 <Application x:Class="MaterialDesignColors.WpfExample.App"
