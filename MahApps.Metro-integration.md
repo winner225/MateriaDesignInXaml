@@ -1,6 +1,6 @@
 ***
 
-**Please Note:** *The MaterialDesignThemes.MahApps project is not yet included in any of the Toolkit's NuGet packages. To follow this article, you'll have to copy its contents to your project manually.*
+**Please Note:** *The MaterialDesignThemes.MahApps project is contained in [its own NuGet package](https://www.nuget.org/packages/MaterialDesignThemes.MahApps), which must be downloaded separatedly. (```Install-Package MaterialDesignThemes.MahApps```)*
 
 
 ***
