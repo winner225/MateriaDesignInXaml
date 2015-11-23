@@ -1,14 +1,14 @@
 # Contribution Guidelines
 
-PRs to this project are welcome, but before contributing please bear in mind my thoughts below. If you want to get involved but are unsure, please ask (say hello in the [Gitter chat room](http://gitter.im/ButchersBoy/MaterialDesignInXamlToolkit)).  Also note I wrote these guidlelines several months after the library was first made available, with the benefit of hindsight.  Apologies if there are inconsistences with what you read below and what's already in the library.
+PRs to this project are welcome, but before contributing please bear in mind my thoughts below. If you want to get involved but are unsure, please ask (say hello in the [Gitter chat room](http://gitter.im/ButchersBoy/MaterialDesignInXamlToolkit)).  Also note I wrote these guidelines several months after the library was first made available, with the benefit of hindsight.  Apologies if there are inconsistencies with what you read below and what's already in the library.
 
 ## The purpose of this libary:
 
 This is a theme library, **not** a control library.  There is a subtle difference.  Yes, there are some new custom controls, but their role is to specifically support either styling of existing WPF controls, or to Material Design components, as per the "Components" section in [Google's guidelines](https://www.google.com/design/spec/material-design/introduction.html).
 
-The role of this library is to give users Material Design themes for standard WPF controls, and custom controls for Google specified components where no paradigm exists in WPF, or where existing WPF controls cannot be sufficiently styled to meet the Google specification.  Anything else is outside the scope of this library. WPF is very powerful and flexible when it comes to creating custom controls, but that doesn't mean I want to fill up this library with random controls.  I want to provide the base tools and controls for Material Design, giving people a springboard to create their own controls where required.
+The role of this library is to give users Material Design themes for standard WPF controls, and custom controls for Google specified components where no parallel exists in WPF, or where existing WPF controls cannot be sufficiently styled to meet the Google specification.  Anything else is outside the scope of this library. WPF is very powerful and flexible when it comes to creating custom controls, but that doesn't mean I want to fill up this library with random controls.  I want to provide the base tools and controls for Material Design, giving people a springboard to create their own controls where required.
 
-In no way is this library a home for any sort of application of business logic.
+In no way is this library a home for any sort of application or business logic.
 
 ## Coding standards:
 
