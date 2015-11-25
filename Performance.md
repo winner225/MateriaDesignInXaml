@@ -1,5 +1,3 @@
-# Performance
-
 [refers to pre-release version]
 
 This library relies heavily on animation, but it may be necessary to reduce the animation burden, for example on resource constrained hardware.
