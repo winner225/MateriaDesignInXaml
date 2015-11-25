@@ -1,6 +1,6 @@
-[refers to pre-release version]
+_[refers to pre-release version]_
 
-This library relies heavily on animation, but it may be necessary to reduce the animation burden, for example on resource constrained hardware.
+This library relies heavily on animation but it may be necessary to reduce the animation burden, for example when running on resource constrained hardware.
 
 These techniques can help:
 
