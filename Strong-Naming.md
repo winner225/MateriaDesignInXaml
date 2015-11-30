@@ -1,0 +1,1 @@
+The assemblies are not strong named.  If you are looking for strong named versions then the recommended path is to use: https://github.com/dsplaisted/strongnamer
