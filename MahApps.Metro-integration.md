@@ -94,6 +94,22 @@ Similar to the Dialogs, they work just like in MahApps, you just need to overrid
 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.MahApps;component/Themes/MaterialDesignTheme.MahApps.Flyout.xaml" />
 ```
 
+### Known Issues
+
+When using a custom background brush on a flyout where the close button and title are collapsed, you are limited to using a color from your Material Design palette.
+
+The brush used for the `Background` property must be of the same color as the `ColorZoneMode` used for the header:
+
+```
+<Controls:Flyout Position="Bottom"
+                 CloseButtonVisibility="Collapsed"
+                 TitleVisibility="Collapsed"
+                 Background="{DynamicResource PrimaryHueLightBrush"
+                 mahApps:FlyoutAssist.HeaderColorMode="PrimaryLight"
+                 >
+                <TextBlock>Some content</TextBlock>
+</Controls:Flyout>
+```
 ## The Palette Helper
 
 If you plan on using the Toolkit's Palette Helper to switch colors dynamically during run-time, you need to add an extra paremeter to every *ReplacePrimaryColor* call, to properly change MahApps' brushes. For example:
