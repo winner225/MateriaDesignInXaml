@@ -1,4 +1,6 @@
 **Material Design in XAML Toolkit** consists of Material styles for existing components and completly new components that follow the Material Design logic. This article will guide you through the steps necessary to set-up Material Design in XAML Toolkit in your project.
+
+There is also an [introductory video](https://youtu.be/-n5yeEOsbCk).
  
 ## Installing the Toolkit
 
