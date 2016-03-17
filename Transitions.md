@@ -11,7 +11,6 @@ The transitioner is an ```ItemsControl```. Each item forms a slide.  The active 
 Imagine a simple wizard:
 
 ```
-
 <materialDesign:Transitioner SelectedIndex="0">
     <WizardPageOne />
     <WizardPageTwo />
