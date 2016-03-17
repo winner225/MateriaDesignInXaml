@@ -2,6 +2,8 @@ The transitions part of Material Design In XAML Toolkit seeks to make attractive
 
 There are a couple of core classes which can be used from XAML.  The ```Transitioner``` and ```TransitioningContent```.  Use them, and combine them, setting effects on them, to piece together transitions as a user moves through the application.
 
+To see transitions in action and study the XAML, see the main demo, or the [F1 In XAML](https://github.com/MaterialDesignInXAML/F1InXAML) demo.
+
 # Transitioner
 
 The transitioner is an ```ItemsControl```. Each item forms a slide.  The active slide is defined by the ```.SelectedIndex```
@@ -9,6 +11,7 @@ The transitioner is an ```ItemsControl```. Each item forms a slide.  The active 
 Imagine a simple wizard:
 
 ```
+
 <materialDesign:Transitioner SelectedIndex="0">
     <WizardPageOne />
     <WizardPageTwo />
@@ -95,3 +98,7 @@ Effects can be delayed.  Using an items control, a great cascading effect can ac
 </ItemsControl>
 ```
 
+# Additional
+
+* Custom wipes can be create be implementing ```ITransitionWipe```
+* Custom effects can be created by implementing ```ITransitionEffect```
