@@ -1,3 +1,13 @@
+Dialogs in WPF have always been somewhat tricky.  The Material Design In XAML Toolkit's dialogs implementation is designed to:
+
+* Provide correct styling
+* Allow any dialog to be constructed
+* Compatible with code-behind
+* Compatible with MVVM
+* Compatible with pure XAML
+
+Dialogs _are asynchronous_ so at some point you will have to deal with that in your code.
+
 The cornerstone of dialogs the DialogHost control.  It’s a content control, meaning the underlying content over which the popup dialog will be displayed can be targeted; to a specific area of your app, or the entire Window content.
 
 ```
