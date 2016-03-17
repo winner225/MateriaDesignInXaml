@@ -58,6 +58,40 @@ You could use these in your user control (e.g. inside WizardPageOne):
 </Button>
 ```
 
+# TransitioningContent
 
+```TransitioningContent``` is a ```ContentControl``` enabling animations to be run on a UI element easily, typically when a control loads.  By combining with the ```Transitioner``` more complex animations can be created.  Usage is simple:
 
+```
+<materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect ExpandIn}">
+    <TextBlock>Hello World</TextBlock>
+</materialDesign:TransitioningContent>
+```
+
+Effects can be combined:
+```
+<materialDesign:TransitioningContent>
+    <materialDesign:TransitioningContent.OpeningEffects>
+        <materialDesign:TransitionEffect Kind="FadeIn" />
+        <materialDesign:TransitionEffect Kind="SlideInFromBottom" />
+    </materialDesign:TransitioningContent.OpeningEffects>
+    <TextBlock>Hello World</TextBlock>
+</materialDesign:TransitioningContent>
+```
+
+Effects can be delayed.  Using an items control, a great cascading effect can achieved but using a delay offset multiplier:
+
+```
+<ItemsControl>
+    <materialDesign:TransitioningContent OpeningEffectsOffset="{materialDesign:IndexedItemOffsetMultiplier 0:0:0.05}">
+        <materialDesign:TransitioningContent.OpeningEffects>
+            <materialDesign:TransitionEffect Kind="SlideInFromLeft" />
+        </materialDesign:TransitioningContent.OpeningEffects>
+        <TextBlock>Hello World</TextBlock>
+    </materialDesign:TransitioningContent>
+    . . .
+    <!-- more items using same multipler -->
+    . . .
+</ItemsControl>
+```
 
