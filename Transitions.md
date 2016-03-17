@@ -18,7 +18,7 @@ Imagine a simple wizard:
 </materialDesign:Transitioner>
 ```
 
-The ```Transitioner``` will automatically wrap each wizard page in a ```TransitionerSlide``` Straight out of the box there will be a circle **wipe** going forwards through the wizard, and slide wipe going backwards.  You have more granular control by specifying the slide manually, where you can ass an additional opening **effect** (which will run in addition to the wipe):
+The ```Transitioner``` will automatically wrap each wizard page in a ```TransitionerSlide``` Straight out of the box there will be a circle **wipe** going forwards through the wizard, and slide wipe going backwards.  You have more granular control by specifying the slide manually, where you can add an additional opening **effect** (which will run in addition to the wipe):
 
 ```
 <materialDesign:Transitioner SelectedIndex="0">
