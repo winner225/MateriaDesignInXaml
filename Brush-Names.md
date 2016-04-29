@@ -18,7 +18,24 @@ NB.  *[Light/Mid/Dark]Brush brushes define the different hues of the primary col
 * SecondaryAccentBrush
 * SecondaryAccentForegroundBrush
 
-# Example Usage
+## Example Usage
 
 ```<TextBlock Foreground="{DynamicResource PrimaryHueMidBrush}" />```
+
+# Light/Dark Specific Brush Names
+
+* MaterialDesignBackground
+* MaterialDesignPaper
+* MaterialDesignBody
+* MaterialDesignBodyLight
+* MaterialDesignColumnHeader
+* MaterialDesignCheckBoxOff
+* MaterialDesignCheckBoxDisabled
+* MaterialDesignTextBoxBorder
+* MaterialDesignDivider
+* MaterialDesignSelection
+* MaterialDesignFlatButtonClick
+* MaterialDesignFlatButtonRipple
+* MaterialDesignToolTipBackground
+* MaterialDesignChipBackground
 
