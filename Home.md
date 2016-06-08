@@ -4,4 +4,4 @@ Start at one of these places:
 
 * [[Super Quick Start]]
 
-* Or, the more comprehensive [[Starting Guide|Getting Started]] guide.
+* Or, the more comprehensive [[Getting Starting|Getting Started]] guide.
