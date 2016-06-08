@@ -1,3 +1,7 @@
-Welcome to the MaterialDesignInXamlToolkit wiki!
+# Welcome to the Material Design In XAML Toolkit wiki!
 
-If you're new to the project, go over to the [[Starting Guide|Getting Started]] to learn how to use the Toolkit.
+Start at one of these places:
+
+* [[Super Quick Start]]
+
+* Or, checkout the more comprehensive [[Starting Guide|Getting Started]] guide.
