@@ -3,7 +3,7 @@
 - Edit App.xaml to following:
 
 ```
-<Application . . .>
+<Application . . . >
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
