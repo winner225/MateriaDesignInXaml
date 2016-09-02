@@ -60,6 +60,13 @@ You could use these in your user control (e.g. inside WizardPageOne):
 </Button>
 ```
 
+## Wipes
+
+There are currently only 2 built-in wipes available:
+
+- CircleWipe
+- SlideOutWipe
+
 # TransitioningContent
 
 ```TransitioningContent``` is a ```ContentControl``` enabling animations to be run on a UI element easily, typically when a control loads.  By combining with the ```Transitioner``` more complex animations can be created.  Usage is simple:
