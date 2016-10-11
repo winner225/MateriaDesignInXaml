@@ -60,12 +60,24 @@ You could use these in your user control (e.g. inside WizardPageOne):
 </Button>
 ```
 
+## Effects
+
+There are seven kinds of effects:
+
+* None
+* ExpandIn
+* FadeIn
+* SlideInFromLeft
+* SlideInFromTop
+* SlideInFromRight
+* SlideInFromBottom
+
 ## Wipes
 
 There are currently only 2 built-in wipes available:
 
-- CircleWipe
-- SlideOutWipe
+* CircleWipe
+* SlideOutWipe
 
 # TransitioningContent
 
