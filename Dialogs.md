@@ -5,6 +5,7 @@ Dialogs in WPF have always been somewhat tricky.  The Material Design In XAML To
 * Compatible with code-behind
 * Compatible with MVVM
 * Compatible with pure XAML
+* Work in applications with multiple windows
 
 Dialogs _are asynchronous_ so at some point you will have to deal with that in your code.
 
@@ -23,7 +24,7 @@ When the dialog is open, the underlying content will be dimmed and disabled.
 
 ![](https://dragablz.files.wordpress.com/2015/10/materialdesigndialogs.png)
 
-DialogHost.DialogContent (associated with DialogHost.DialogContentTemplate) is your typical XAML content object property for setting the content of your dialog.  You can infer from this that you can use MVVM to bind content, but there are multiple ways of populating the content, showing the dialog, closing the dialog, and processing responses, so here’s a list of all the strategies for using the dialog (after the gif):
+DialogHost.DialogContent (associated with DialogHost.DialogContentTemplate) is your typical XAML content object property for setting the content of your dialog.  You can infer from this that you can use MVVM to bind content, but **there are multiple ways of populating the content, showing the dialog, closing the dialog, and processing responses**, so here’s a list of all the strategies for using the dialog (after the gif):
 
 ![](https://dragablz.files.wordpress.com/2015/10/materialdesigndialog_s.gif)
 
@@ -51,9 +52,26 @@ Dependency property, to be triggered from XAML, set from code-behind or via a bi
 DialogHost.Show(viewOrModel);
 ```
 
-Async/await based static API which can be used purely in code (for example from in a view model).  Content can be passed directly to the dialog.
+Async/await based static API which can be used purely in code (for example from in a view model).  Content can be passed directly to the dialog.  Note that if you have multiple windows and multiple ``` DialogHost ``` instances you can set the ``` DialogHost.Identifier ``` property, and provide the identifier to the ``` .Show(...) ``` method to help find the required DialogHost.  
+
+Where there are multiple possible dialog host instances, and alternative method to show the dialog at the correct window is to use the extension method:
+
+## .Show() extension method
+
+Extending both Window and DepedencyObject this method will try and locate the most apt DialogHost to display the dialog.
 
 # Close Dialog Strategies
+
+## DialogSession.Close()
+
+Via any of the methods for handling the opened event, you can get hold of the dialog session.  This cn be used to close a dialog via code:
+
+```
+var result = await nearTo.ShowDialog(myControl, delegate(object sender, DialogOpenedEventArgs args)
+{
+    args.Session.Close(false);
+});
+```
 
 ## DialogHost.CloseDialogCommand
 
@@ -71,7 +89,7 @@ RoutedCommand, typically used on buttons inside the dialog, where the command pa
 
 Dependency property, to be triggered from XAML, set from code-behind or via a binding.
 
-# Handle Close Strategies
+# Handle Closing Event Strategies
 
 The DialogClosingEventHandler delegate is key.  It provides the parameter provided to DialogHost.CloseDialogCommand, and allows the pending close to be cancelled.
 
