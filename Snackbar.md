@@ -1,4 +1,3 @@
-# SNACKBAR NOT YET AVAILABLE,  COMING SOON!
 The simplest forms of snackbar usage are:
 
 ```
