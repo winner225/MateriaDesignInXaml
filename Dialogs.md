@@ -64,10 +64,19 @@ Extending both Window and DepedencyObject this method will try and locate the mo
 
 ## DialogSession.Close()
 
-Via any of the methods for handling the opened event, you can get hold of the dialog session.  This cn be used to close a dialog via code:
+Via any of the methods for handling the opened event, you can get hold of the dialog session.  This can be used to close a dialog via code:
 
 ```
 var result = await nearTo.ShowDialog(myControl, delegate(object sender, DialogOpenedEventArgs args)
+{
+    args.Session.Close(false);
+});
+```
+
+or
+
+```
+var result = await DialogHost.Show(myControl, delegate(object sender, DialogOpenedEventArgs args)
 {
     args.Session.Close(false);
 });
