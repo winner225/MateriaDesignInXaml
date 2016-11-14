@@ -43,3 +43,31 @@ Illustration of advanced configuration of App.xaml which allows individual palet
     </Application.Resources>
 </Application>
 ```
+
+## Custom Colours
+
+If you want to use completely non-standard brushes, just define them manually:
+
+```xml
+<Application x:Class="MaterialDesignColors.WpfExample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+        	<!-- primary -->
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#744CE0"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#FFFFFF"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#6134D9"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#FFFFFF"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#4D1DCF"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#FFFFFF"/>
+            <!-- accent -->
+            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#5C5B5E"/>
+            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="#FFFFFF"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+```
+
