@@ -35,7 +35,7 @@
     </Grid>
 </Window>
 ```
-- Hit F5, viola!
+- Hit F5, voila!
 
 ![](https://raw.githubusercontent.com/ButchersBoy/MaterialDesignInXamlToolkit/master/web/images/wikiscreen-quickstart.png)
 
