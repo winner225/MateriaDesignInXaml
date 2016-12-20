@@ -42,3 +42,13 @@ There are two types of Recommended Colors, and one of each must be imported to m
 
 
  [guide]:https://www.google.com/design/spec/style/color.html#color-color-palette
+
+## Querying Palettes
+
+The currently configured palette can be queried via ``` PaletteHelper ```.  The following example illustrates how to query the current palette and set a control's background via code:
+
+```
+var palette = new PaletteHelper().QueryPalette();
+hue = palette.AccentSwatch.AccentHues.ToArray()[palette.AccentHueIndex];
+MyBorder.Background = new SolidColorBrush(hue.Color);
+```
