@@ -49,6 +49,6 @@ The currently configured palette can be queried via ``` PaletteHelper ```.  The 
 
 ```
 var palette = new PaletteHelper().QueryPalette();
-hue = palette.AccentSwatch.AccentHues.ToArray()[palette.AccentHueIndex];
+var hue = palette.AccentSwatch.AccentHues.ToArray()[palette.AccentHueIndex];
 MyBorder.Background = new SolidColorBrush(hue.Color);
 ```
